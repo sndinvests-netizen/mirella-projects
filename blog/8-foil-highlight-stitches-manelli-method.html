@@ -16,8 +16,9 @@
 #fs-blog-wrap .watch-card:hover{box-shadow:0 4px 16px rgba(250,81,133,.15);}
 #fs-blog-wrap .watch-icon{flex-shrink:0;width:44px;height:44px;background:#FF0000;border-radius:10px;display:flex;align-items:center;justify-content:center;}
 #fs-blog-wrap .watch-icon svg{width:22px;height:22px;fill:#fff;}
-#fs-blog-wrap .watch-label{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#6B4F40;margin-bottom:4px;}
-#fs-blog-wrap .watch-title{font-size:14px;font-weight:600;line-height:1.4;}
+#fs-blog-wrap .video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;margin:0 0 32px;box-shadow:0 4px 24px rgba(1,90,66,0.15);}
+#fs-blog-wrap .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:10px;}
+#fs-blog-wrap .video-label{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#6B4F40;margin-bottom:10px;}
 #fs-blog-wrap .quick-answer{background:#015A42;color:#fff;border-radius:10px;padding:20px 24px;margin:0 0 36px;font-size:15px;line-height:1.65;}
 #fs-blog-wrap .quick-answer strong{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#FFB6BA;margin-bottom:8px;}
 #fs-blog-wrap h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#015A42;margin:44px 0 14px;padding-bottom:8px;border-bottom:2px solid #EDD9CF;}
@@ -67,6 +68,7 @@
 #fs-blog-wrap .toc li{margin-bottom:6px;font-size:15px;}
 #fs-blog-wrap .toc a{color:#015A42;text-decoration:none;font-weight:600;}
 #fs-blog-wrap .toc a:hover{color:#FA5185;}
+#fs-blog-wrap .stitch-img{width:100%;height:auto;display:block;border-radius:8px;margin-bottom:16px;}
 @media(max-width:560px){#fs-blog-wrap .watch-card{flex-direction:column;align-items:flex-start;}}
 </style>
 
@@ -97,15 +99,10 @@
     There are 8 distinct foil highlight stitch methods: the Slice, Chunky Weave, Traditional Weave, Babylights, Microlights, Combination, Zigzag, and the Manelli Method. Each produces a different root diffusion, coverage level, and texture. Understanding all 8 means knowing which one to reach for when a specific client sits down — not just defaulting to the two or three you've always used.
   </div>
 
-  <a class="watch-card" href="https://www.youtube.com/@MirellaManelli" target="_blank" rel="noopener">
-    <div class="watch-icon">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
-    </div>
-    <div>
-      <div class="watch-label">Watch on YouTube</div>
-      <div class="watch-title">8 Ways to Foil Highlights — All 8 Stitches Demonstrated Live by Mirella Manelli</div>
-    </div>
-  </a>
+  <p class="video-label">▶ Watch: 8 Ways to Foil Highlights — All 8 Stitches Demonstrated Live by Mirella Manelli</p>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/fyOs3ghnX-I?start=2" title="8 Ways to Foil Highlights — Mirella Manelli" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
 
   <div class="toc">
     <p class="toc-label">In This Post</p>
@@ -152,6 +149,7 @@
   <h2 id="slice">Stitch 1: The Slice</h2>
 
   <div class="stitch-card">
+    <img class="stitch-img" src="https://mirellamanelli.com/wp-content/uploads/2025/02/slice-highlights.jpg" alt="slice foil highlight technique showing high contrast bold highlights on hair" width="860" height="574" loading="lazy">
     <div class="stitch-number">Stitch 01</div>
     <h3>The Slice</h3>
     <p><strong>What it is:</strong> A slice takes every strand of hair within the section into the foil — no weaving. The entire thickness of hair between two partings is isolated and lightened.</p>
@@ -163,6 +161,7 @@
   <h2 id="chunky">Stitch 2: The Chunky Weave</h2>
 
   <div class="stitch-card">
+    <img class="stitch-img" src="https://mirellamanelli.com/wp-content/uploads/2025/02/chunky-highlights.jpg" alt="chunky weave foil highlight technique showing bold visible highlights with dimension" width="860" height="574" loading="lazy">
     <div class="stitch-number">Stitch 02</div>
     <h3>The Chunky Weave</h3>
     <p><strong>What it is:</strong> A weave where the comb picks up larger, thicker sections to go into the foil, leaving thicker sections out. The weave alternates "in" and "out" at a coarser scale than a traditional weave.</p>
@@ -174,6 +173,7 @@
   <h2 id="traditional">Stitch 3: The Traditional Weave</h2>
 
   <div class="stitch-card">
+    <img class="stitch-img" src="https://mirellamanelli.com/wp-content/uploads/2025/02/traditional-highlights.jpg" alt="traditional weave foil highlight technique showing classic even highlight coverage" width="860" height="574" loading="lazy">
     <div class="stitch-number">Stitch 03</div>
     <h3>The Traditional Weave</h3>
     <p><strong>What it is:</strong> The standard foil weave most stylists learn first. The comb alternates picking up fine-to-medium sections — into the foil, left out, into the foil — creating an even, regular pattern throughout the section.</p>
@@ -185,6 +185,7 @@
   <h2 id="babylights">Stitch 4: Babylights</h2>
 
   <div class="stitch-card">
+    <img class="stitch-img" src="https://mirellamanelli.com/wp-content/uploads/2025/02/babylight-highlights.jpg" alt="babylight foil highlight technique showing ultra-fine natural looking highlights" width="860" height="574" loading="lazy">
     <div class="stitch-number">Stitch 04</div>
     <h3>Babylights</h3>
     <p><strong>What it is:</strong> An ultra-fine weave that takes very small, delicate sections — typically one to three strands — into the foil, leaving the majority of hair out.</p>
@@ -196,6 +197,7 @@
   <h2 id="microlights">Stitch 5: Microlights</h2>
 
   <div class="stitch-card">
+    <img class="stitch-img" src="https://mirellamanelli.com/wp-content/uploads/2025/02/microlight-highlights.jpg" alt="microlight foil highlight technique showing fine diffused highlights with soft dimension" width="860" height="574" loading="lazy">
     <div class="stitch-number">Stitch 05</div>
     <h3>Microlights</h3>
     <p><strong>What it is:</strong> A middle ground between babylights and a traditional weave. Sections of two to five strands, leaving small amounts of hair between each section.</p>
@@ -207,6 +209,7 @@
   <h2 id="combination">Stitch 6: The Combination Technique</h2>
 
   <div class="stitch-card">
+    <img class="stitch-img" src="https://mirellamanelli.com/wp-content/uploads/2025/02/combination-highlights.jpg" alt="combination foil highlight technique using multiple stitch methods for custom dimensional color" width="860" height="574" loading="lazy">
     <div class="stitch-number">Stitch 06</div>
     <h3>The Combination Technique</h3>
     <p><strong>What it is:</strong> Using two or more stitch methods in the same service — most commonly combining slices for face-framing pieces with a fine weave through the body, or pairing babylights with a chunkier weave at the crown.</p>
@@ -218,6 +221,7 @@
   <h2 id="zigzag">Stitch 7: The Zigzag</h2>
 
   <div class="stitch-card">
+    <img class="stitch-img" src="https://mirellamanelli.com/wp-content/uploads/2025/02/zigzag-highlights.jpg" alt="zigzag foil highlight technique showing soft diffused root line" width="860" height="574" loading="lazy">
     <div class="stitch-number">Stitch 07</div>
     <h3>The Zigzag</h3>
     <p><strong>What it is:</strong> Instead of a straight horizontal parting at the top of the section, you part in a zigzag pattern. The hair included in the foil follows the zigzag line rather than a clean edge.</p>
@@ -229,6 +233,7 @@
   <h2 id="manelli-method">Stitch 8: The Manelli Method ★</h2>
 
   <div class="stitch-card hero-stitch">
+    <img class="stitch-img" src="https://mirellamanelli.com/wp-content/uploads/2025/02/Manelli-Method-Highlights.jpg" alt="Manelli Method highlights technique showing double zigzag foil placement and lived-in root result" width="860" height="574" loading="lazy">
     <div class="stitch-number">Stitch 08 — Signature</div>
     <h3>The Manelli Method</h3>
     <p><strong>What it is:</strong> My signature technique. The Manelli Method uses a <strong>double zigzag parting</strong> — one at the top of the section and one at the bottom — combined with a <strong>Dream Weaver comb</strong> to separate and weave the mid-lengths and ends before the foil is placed.</p>
