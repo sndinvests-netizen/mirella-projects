@@ -1,0 +1,380 @@
+<!-- How to Do Foilayage: The Complete Balayage with Foils Technique
+     WordPress Custom HTML Block - paste this entire block as-is -->
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+#mm-blog-wrap{width:100%;max-width:860px;margin:0 auto;font-family:'Open Sans',sans-serif;color:#171411;font-size:18px;line-height:1.83;}
+#mm-blog-wrap *{box-sizing:border-box;}
+#mm-blog-wrap .post-meta{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6B4F40;margin-bottom:16px;}
+#mm-blog-wrap .tag{display:inline-block;background:#FFB6BA;color:#015A42;border-radius:4px;padding:1px 8px;font-size:11px;font-weight:700;letter-spacing:.08em;margin-right:6px;text-transform:uppercase;text-decoration:none;}
+#mm-blog-wrap a.tag:hover{background:#FA5185;color:#fff;}
+#mm-blog-wrap h1.post-title{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,38px);font-weight:700;line-height:1.2;color:#015A42;margin:16px 0 10px;}
+#mm-blog-wrap .post-subtitle{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(16px,2.2vw,20px);color:#8A5A3E;line-height:1.5;margin-bottom:16px;}
+#mm-blog-wrap .byline{font-size:13px;color:#6B4F40;margin-bottom:32px;padding-bottom:24px;border-bottom:2px solid #EDD9CF;}
+#mm-blog-wrap .video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;margin:0 0 32px;box-shadow:0 4px 24px rgba(1,90,66,0.15);}
+#mm-blog-wrap .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:10px;}
+#mm-blog-wrap .video-label{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#6B4F40;margin-bottom:10px;}
+#mm-blog-wrap .quick-answer{background:#015A42;color:#fff;border-radius:10px;padding:20px 24px;margin:0 0 36px;font-size:15px;line-height:1.65;}
+#mm-blog-wrap .quick-answer strong{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#FFB6BA;margin-bottom:8px;}
+#mm-blog-wrap h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#015A42;margin:44px 0 14px;padding-bottom:8px;border-bottom:2px solid #EDD9CF;}
+#mm-blog-wrap h3{font-size:16px;font-weight:700;color:#8A5A3E;margin:28px 0 10px;}
+#mm-blog-wrap p{margin-bottom:16px;}
+#mm-blog-wrap em{font-style:italic;}
+#mm-blog-wrap strong{font-weight:700;}
+#mm-blog-wrap ul,#mm-blog-wrap ol{padding-left:20px;margin-bottom:16px;}
+#mm-blog-wrap li{margin-bottom:8px;}
+#mm-blog-wrap .callout{background:#FFF4EE;border-left:5px solid #FA5185;border-radius:6px;padding:16px 20px;margin:20px 0 28px;font-size:15px;}
+#mm-blog-wrap .callout-label{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6B4F40;margin-bottom:6px;}
+#mm-blog-wrap .step-block{background:#FFF4EE;border-radius:10px;padding:20px 24px;margin:16px 0 24px;}
+#mm-blog-wrap .step-block h3{margin-top:0;}
+#mm-blog-wrap .step-number{display:inline-block;background:#015A42;color:#fff;font-size:11px;font-weight:700;letter-spacing:.1em;border-radius:4px;padding:2px 10px;margin-bottom:8px;text-transform:uppercase;}
+#mm-blog-wrap table{width:100%;border-collapse:collapse;margin:20px 0 28px;font-size:14px;}
+#mm-blog-wrap th{background:#015A42;color:#fff;text-align:left;padding:10px 14px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;}
+#mm-blog-wrap td{padding:10px 14px;border-bottom:1px solid #EDD9CF;}
+#mm-blog-wrap tr:nth-child(even) td{background:#FFF4EE;}
+#mm-blog-wrap .related-posts{background:#FFF4EE;border-radius:10px;padding:20px 24px;margin:36px 0;}
+#mm-blog-wrap .related-posts p.rp-label{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6B4F40;margin-bottom:12px;}
+#mm-blog-wrap .related-posts ul{list-style:none;padding:0;margin:0;}
+#mm-blog-wrap .related-posts li{padding:10px 0;border-bottom:1px solid #EDD9CF;}
+#mm-blog-wrap .related-posts li:last-child{border-bottom:none;}
+#mm-blog-wrap .related-posts a{color:#015A42;font-weight:600;text-decoration:none;font-size:15px;}
+#mm-blog-wrap .related-posts a:hover{color:#FA5185;}
+#mm-blog-wrap .related-posts a::before{content:"→ ";color:#FA5185;}
+#mm-blog-wrap .use-guide{background:#FFF4EE;border-radius:10px;padding:20px 24px;margin:20px 0 28px;}
+#mm-blog-wrap .use-guide ul{list-style:none;padding:0;}
+#mm-blog-wrap .use-guide li{padding:8px 0;border-bottom:1px solid #EDD9CF;font-size:15px;}
+#mm-blog-wrap .use-guide li:last-child{border-bottom:none;}
+#mm-blog-wrap .use-guide li::before{content:"→";color:#FA5185;font-weight:700;margin-right:10px;}
+#mm-blog-wrap .faq-item{border-bottom:1px solid #EDD9CF;padding:18px 0;}
+#mm-blog-wrap .faq-q{font-weight:700;font-size:15px;color:#015A42;margin:0 0 8px;}
+#mm-blog-wrap .faq-a{font-size:15px;}
+#mm-blog-wrap hr{border:none;border-top:1px solid #EDD9CF;margin:32px 0;}
+#mm-blog-wrap .author-bio{background:#FFF4EE;border-radius:10px;padding:20px 24px;margin-top:40px;font-size:13px;color:#6B4F40;font-style:italic;}
+#mm-blog-wrap .cta-block{background:#FA5185;color:#fff;border-radius:10px;padding:20px 24px;margin:32px 0;font-weight:600;font-size:15px;text-align:center;}
+#mm-blog-wrap .cta-block a{color:#fff;text-decoration:underline;}
+#mm-blog-wrap a{color:#FA5185;font-weight:600;}
+#mm-blog-wrap .toc{background:#fff;border:2px solid #EDD9CF;border-radius:10px;padding:20px 24px;margin:0 0 36px;}
+#mm-blog-wrap .toc p.toc-label{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#6B4F40;margin-bottom:10px;}
+#mm-blog-wrap .toc ol{margin:0;padding-left:18px;}
+#mm-blog-wrap .toc li{margin-bottom:6px;font-size:15px;}
+#mm-blog-wrap .toc a{color:#015A42;text-decoration:none;font-weight:600;}
+#mm-blog-wrap .toc a:hover{color:#FA5185;}
+#mm-blog-wrap .post-image{width:100%;margin:28px 0 8px;border-radius:10px;overflow:hidden;}
+#mm-blog-wrap .post-image img{width:100%;height:auto;display:block;border-radius:10px;}
+#mm-blog-wrap .post-image figcaption{font-size:13px;color:#6B4F40;text-align:center;padding:8px 0 20px;font-style:italic;}
+#mm-blog-wrap .disclosure{background:#FFF4EE;border-radius:6px;padding:10px 16px;font-size:13px;color:#6B4F40;font-style:italic;margin-bottom:28px;}
+</style>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How to Do Foilayage: The Complete Balayage with Foils Technique","description":"Learn the foilayage technique step by step — balayage with foils for darker bases, gray blending, and dimensional color. Mirella Manelli's full tutorial.","author":{"@type":"Person","name":"Mirella Manelli","jobTitle":"Professional Hairstylist & Educator","url":"https://mirellamanelli.com"},"publisher":{"@type":"Organization","name":"Hair B&B University","url":"https://mirellamanelli.com"},"datePublished":"2026-05-25","dateModified":"2026-05-25","mainEntityOfPage":"https://mirellamanelli.com/how-to-do-a-balayage-with-foils-easy-foilayage-hair-technique/"}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between foilayage and balayage?","acceptedAnswer":{"@type":"Answer","text":"Balayage is a freehand painting technique done without foils, best suited for levels 7 through 10. Foilayage wraps those painted sections in foil, creating heat that allows the lightener to lift higher and more evenly on darker bases (levels 1 through 6). If your client is on a dark base, foilayage will deliver better results than open-air balayage every time."}},{"@type":"Question","name":"What lightener should I use for foilayage on dark hair?","acceptedAnswer":{"@type":"Answer","text":"Blue powder lightener at 20 volume is the standard for foilayage on levels 1 through 6. The blue pigment neutralizes warmth during the lift, and powder lightener performs better in a foil environment than clay."}},{"@type":"Question","name":"Can foilayage cover gray hair?","acceptedAnswer":{"@type":"Answer","text":"Foilayage blends gray rather than covering it. For clients who need gray coverage plus dimension, combine foilayage with Studio Stylist Express (SSE) in the toning step. SSE covers gray and tones in 10 minutes, so you get both in a single service."}},{"@type":"Question","name":"How long does foilayage take?","acceptedAnswer":{"@type":"Answer","text":"A full foilayage service typically runs 2.5 to 3.5 hours depending on hair density, length, and section count. Processing at room temperature adds 30 to 45 minutes inside that window."}},{"@type":"Question","name":"How often should a client get foilayage retouched?","acceptedAnswer":{"@type":"Answer","text":"Most foilayage clients return every 10 to 14 weeks. The soft, blended grow-out is one of the biggest selling points of the technique — there is no harsh root line, so clients do not feel the same urgency they would with a full foil highlight."}},{"@type":"Question","name":"Is foilayage good for fine hair?","acceptedAnswer":{"@type":"Answer","text":"Yes, with adjustments. Use smaller, thinner sections and lighter saturation per foil. The babylights approach around the hairline is especially flattering on fine hair because it adds the appearance of density without bulk."}}]}
+</script>
+
+<div id="mm-blog-wrap">
+
+  <div class="post-meta">
+    <span>May 25, 2026</span>
+    <a class="tag" href="https://mirellamanelli.com/tag/balayage/" target="_blank" rel="noopener">Balayage</a>
+    <a class="tag" href="https://mirellamanelli.com/tag/highlights/" target="_blank" rel="noopener">Highlights</a>
+    <a class="tag" href="https://mirellamanelli.com/tag/gray-blending/" target="_blank" rel="noopener">Gray Blending</a>
+    <a class="tag" href="https://mirellamanelli.com/tag/color-education/" target="_blank" rel="noopener">Color Education</a>
+  </div>
+
+  <h1 class="post-title">How to Do Foilayage: The Complete Balayage with Foils Technique</h1>
+  <p class="post-subtitle">The control of a highlight. The softness of a balayage. And the best gray blending tool in your entire kit.</p>
+  <div class="byline">By <strong>Mirella Manelli</strong> &nbsp;|&nbsp; Professional Hairstylist &amp; Educator &nbsp;|&nbsp; 20+ Years Experience &nbsp;|&nbsp; Founder, Hair B&amp;B University</div>
+
+  <div class="disclosure">This post contains affiliate links. We may earn a small commission at no extra cost to you.</div>
+
+  <div class="quick-answer">
+    <strong>Quick Answer</strong>
+    Foilayage is balayage done inside a foil. You use the same freehand painting technique, but the foil environment creates heat that gives your lightener the lift it needs on darker bases (levels 1 through 6). The result sits between a traditional highlight and a classic balayage: soft, dimensional, and with a grow-out that stays beautiful for 10 to 14 weeks.
+  </div>
+
+  <p class="video-label">▶ Watch: How to Foilayage — Mirella Manelli Live Demonstration</p>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/lgJ3Hc86_2U" title="How To Foilayage | Trendy Hair Color by Mirella Manelli | Kenra Color" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <div class="toc">
+    <p class="toc-label">In This Post</p>
+    <ol>
+      <li><a href="#what-is">What Is Foilayage?</a></li>
+      <li><a href="#vs-balayage">Foilayage vs. Traditional Balayage</a></li>
+      <li><a href="#who-its-for">Who Is Foilayage Best For?</a></li>
+      <li><a href="#tools">Tools and Products You Need</a></li>
+      <li><a href="#step-by-step">How to Do Foilayage: Step by Step</a></li>
+      <li><a href="#gray-hair">Foilayage for Gray Hair: The Full Strategy</a></li>
+      <li><a href="#sse">Using SSE for Gray Coverage While You Lift</a></li>
+      <li><a href="#pro-tips">Pro Tips for Better Results</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </div>
+
+  <!-- INTRO -->
+  <p>If you've ever painted a beautiful balayage on a level 4 client and watched it turn orange mid-process, you already know why <strong>foilayage</strong> exists. The <strong>foilayage technique</strong> gives you the control of a highlight and the softness of a balayage, all in one service. And for gray blending on darker bases? Nothing comes close.</p>
+  <p>This is my complete foilayage tutorial: the sectioning, the products, the gray strategy, and the tips I've built over 20+ years doing this work. Let's get into it.</p>
+
+  <figure class="post-image">
+    <img src="https://mirellamanelli.com/wp-content/uploads/foilayage-technique-result.jpg" alt="foilayage technique result on dark brunette hair showing soft dimensional color" width="860" height="574" loading="eager">
+    <figcaption>Foilayage result: soft at the root, dimensional through the mid-lengths, and a grow-out that stays beautiful for months.</figcaption>
+  </figure>
+
+  <hr>
+
+  <h2 id="what-is">What Is Foilayage?</h2>
+  <p><strong>Foilayage</strong> is balayage done inside a foil. The painting technique stays exactly the same — freehand, sweeping strokes that mimic how the sun hits hair — but wrapping the sections in foil gives you more heat, more lift, and more control over where the color goes.</p>
+  <p>The result sits right between a traditional highlight and a classic balayage. You get the soft, blended look of a painted service without the limitations that clay lightener puts on darker bases. The foil does the heavy lifting so the technique can actually work on the clients who need it most.</p>
+
+  <div class="callout">
+    <div class="callout-label">Why It Works</div>
+    The foil creates a sealed environment that traps heat and moisture. That environment is what allows powder lightener to lift 4 to 6 levels on a dark base — something clay lightener in open air simply cannot do.
+  </div>
+
+  <hr>
+
+  <h2 id="vs-balayage">Foilayage vs. Traditional Balayage: The Real Difference</h2>
+  <p>This is one of the most common questions I get from stylists in <a href="https://hairbnbuniversity.com" target="_blank" rel="noopener">Hair B&amp;B University</a>, so let me lay it out clearly.</p>
+
+  <h3>Traditional Balayage</h3>
+  <p><strong>Traditional balayage</strong> works best on levels 7 through 10. The clay lightener lifts 3 to 4 levels, which is plenty when you're starting on a medium-to-light base. The result is soft, sun-kissed, and low maintenance. But when you put that same clay lightener on a level 1 through 6, you will not get the lift. You'll get orange, you'll get banding, and your client will not be happy.</p>
+
+  <h3>Foilayage</h3>
+  <p><strong>Foilayage</strong> solves exactly that. The foil creates heat and locks in moisture, giving your lightener the environment it needs to lift higher and more evenly. You still paint with the same freehand technique, but the foil makes it possible on clients who would otherwise not be candidates for a painted service.</p>
+
+  <table>
+    <thead>
+      <tr><th></th><th>Traditional Balayage</th><th>Foilayage</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Best base level</strong></td><td>7–10</td><td>1–6</td></tr>
+      <tr><td><strong>Lightener type</strong></td><td>Clay</td><td>Powder</td></tr>
+      <tr><td><strong>Lift capacity</strong></td><td>3–4 levels</td><td>4–6+ levels</td></tr>
+      <tr><td><strong>Gray blending</strong></td><td>Limited</td><td>Excellent</td></tr>
+      <tr><td><strong>Processing</strong></td><td>Open air</td><td>Foil + heat</td></tr>
+      <tr><td><strong>Best for</strong></td><td>Lighter natural bases</td><td>Dark bases, gray clients</td></tr>
+    </tbody>
+  </table>
+
+  <p>For a full breakdown of lightener selection by base level, read the <a href="https://mirellamanelli.com/best-bleach-for-dark-hair/" target="_blank" rel="noopener">best bleach for dark hair guide</a>.</p>
+
+  <hr>
+
+  <h2 id="who-its-for">Who Is Foilayage Best For?</h2>
+  <p>Foilayage is the move when your client:</p>
+
+  <div class="use-guide">
+    <ul>
+      <li>Has a natural base of level 1 through 6</li>
+      <li>Wants a soft, dimensional result without a high-contrast highlight</li>
+      <li>Is blending gray and doesn't want full coverage</li>
+      <li>Has gray concentrated around the hairline (that money piece works in your favor)</li>
+      <li>Wants bright results but can't commit to full foil maintenance</li>
+      <li>Has fine or fragile hair that needs lift without mechanical damage</li>
+    </ul>
+  </div>
+
+  <p>It is especially powerful on gray blending clients. When a client has significant gray around the hairline, you don't need to hide it. That natural lightness becomes part of the technique.</p>
+
+  <hr>
+
+  <h2 id="tools">Tools and Products You Need</h2>
+  <p>Getting the right tools makes this technique faster, cleaner, and more consistent across every client.</p>
+
+  <h3>Application Tools</h3>
+  <ul>
+    <li><strong>Balayage board (Coo Board):</strong> Non-negotiable. Regardless of hair length, the board gives you tension and ensures the lightener saturates evenly. No board, no control.</li>
+    <li><strong>Framar Dreamweaver comb:</strong> Perfect weaves every time. The precision on this comb is worth it.</li>
+    <li><strong>Power Painter by Framar:</strong> Use this for your painted sections. It creates maximum diffusion and eliminates harsh lines. If you're painting balayage without a Power Painter, you're working harder than you need to.</li>
+  </ul>
+
+  <h3>Color Products</h3>
+  <ul>
+    <li><strong>Blue Powder Lightener at 20 vol:</strong> The choice for foilayage on levels 1 through 6. Blue powder neutralizes warmth during the lift process.</li>
+    <li><strong>Studio Stylist Express (SSE) 6N and 5A:</strong> For gray coverage after lifting.</li>
+    <li><strong>Kenra Demi-Permanent 7SM at 9 vol:</strong> For toning and blending.</li>
+    <li><strong>Kenra Throwback Volume Spray:</strong> For the finish. Long-lasting movement, zero stickiness, zero crunch.</li>
+    <li><strong>Hot Tools 1-1/4" Marcel Iron:</strong> For the styling finish.</li>
+  </ul>
+
+  <div class="related-posts">
+    <p class="rp-label">Related Reading</p>
+    <ul>
+      <li><a href="https://mirellamanelli.com/best-bleach-for-dark-hair/" target="_blank" rel="noopener">Best Bleach for Dark Hair: How to Choose the Right Lightener for Every Client</a></li>
+      <li><a href="https://mirellamanelli.com/foil-highlight-placement-by-face-shape/" target="_blank" rel="noopener">Foil Highlight Placement by Face Shape: The Stylist's Complete Guide</a></li>
+    </ul>
+  </div>
+
+  <hr>
+
+  <h2 id="step-by-step">How to Do Foilayage: Step by Step</h2>
+
+  <div class="step-block">
+    <div class="step-number">Step 1</div>
+    <h3>Assess the Hair Before You Touch It</h3>
+    <p style="margin-bottom:0;">Before you section anything, look at where the gray is living. On most foilayage clients, gray concentration around the hairline becomes your natural money piece — you'll foil it separately for maximum brightness rather than trying to cover it. Identify the base level across the whole head. On a level 4 or 5, you're committing to foilayage. On a level 7, traditional balayage might serve the client better.</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-number">Step 2</div>
+    <h3>Section Using a V-Pattern Through the Back</h3>
+    <p style="margin-bottom:0;">Start in the back and work in V-sections. Take quarter-inch sections throughout. This gives you enough hair to saturate properly without the sections getting too thick for the lightener to penetrate all the way through the foil.</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-number">Step 3</div>
+    <h3>Apply with a Brick-Lay Pattern</h3>
+    <p>Alternate your sections between diagonal and horizontal. This is critical for dimension:</p>
+    <ul style="margin-bottom:0;">
+      <li><strong>Diagonal sections</strong> build depth</li>
+      <li><strong>Horizontal sections</strong> create brightness</li>
+    </ul>
+    <p style="margin-bottom:0;margin-top:10px;">Never run every section the same direction. That's how you end up with a stripy result instead of a dimensional one. Keep depth toward the center of each section and brightness toward the exterior edges — think about how the sun actually hits hair.</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-number">Step 4</div>
+    <h3>Adjust at the Crown</h3>
+    <p style="margin-bottom:0;">At the crown, transition from V-sections into triangular sections, then into horizontal sections as you move toward the top. This carries the depth from the back through to the top without a visible line where the technique changes. The crown is also where you'll pick up random gray hairs that might otherwise look unblended — the foilayage around them does the blending work, so you don't need to chase every one.</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-number">Step 5</div>
+    <h3>Babylights at the Hairline</h3>
+    <p style="margin-bottom:0;">At the hairline, switch to smaller subsections and create babylights. These are the most delicate highlights in the entire service. When you place babylights next to natural gray, the result looks completely effortless — like the hair grew that way. Back-to-back babylights around the perimeter maximize brightness and pull the gray into the overall look rather than leaving it to stand out on its own.</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-number">Step 6</div>
+    <h3>Saturate — More Than You Think You Need</h3>
+    <p style="margin-bottom:0;">This is where most stylists go wrong: too little lightener leads to uneven lifting every time. Get enough product on each section to ensure it lifts evenly from root to tip through the foil. When in doubt, go heavier. Also check: are you overlapping onto previously lightened sections? On a rebright service, meet the edge of the old foil — don't go over it.</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-number">Step 7</div>
+    <h3>Process at Room Temperature</h3>
+    <p style="margin-bottom:0;">Once all your foils are in, let the hair process at room temperature. No accelerators needed — the foil environment does the work. Check the lift every 10 to 15 minutes. You're looking for an even, consistent lift across all sections before you rinse.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">Always Use a Power Painter</div>
+    For every painted section in a foilayage service, the Power Painter by Framar creates maximum diffusion with zero harsh lines. If you're applying lightener with a standard brush, you're adding unnecessary risk of visible demarcation.
+  </div>
+
+  <figure class="post-image">
+    <img src="https://mirellamanelli.com/wp-content/uploads/foilayage-babylights-hairline.jpg" alt="babylights foilayage technique at hairline blending natural gray hair" width="860" height="574" loading="lazy">
+    <figcaption>Babylights at the hairline blend natural gray seamlessly into the foilayage result.</figcaption>
+  </figure>
+
+  <hr>
+
+  <h2 id="gray-hair">Foilayage for Gray Hair: The Full Strategy</h2>
+  <p>Gray hair isn't a problem to solve. It's information to use.</p>
+  <p>When you look at a client's gray distribution before you section, you're mapping your technique. Heavy gray around the hairline becomes your built-in brightness. Leave it alone, babylight beside it, and let the foilayage do the blending. You'll spend less time fighting the gray and more time creating dimension.</p>
+  <p>The goal with gray blending foilayage is not full coverage. It's integration. The gray should look intentional — like it's part of the highlight, not like you forgot to color it.</p>
+
+  <h3>Key Rules for Gray Foilayage</h3>
+  <div class="use-guide">
+    <ul>
+      <li><strong>Observe first.</strong> Where is the gray heaviest? That section gets the most attention.</li>
+      <li><strong>Don't overlap on regrowth.</strong> Start fresh with your foilayage placement and meet the previous lightener edge without going over it.</li>
+      <li><strong>Use SSE for gray coverage in the toning step.</strong> No separate gloss appointment needed.</li>
+      <li><strong>Babylights around the entire hairline.</strong> The most delicate sections blend the perimeter gray seamlessly into the rest of the result.</li>
+    </ul>
+  </div>
+
+  <p>Want to see the gray blending foilayage process from start to finish? Watch: <a href="https://www.youtube.com/watch?v=o3lofHMtF2k" target="_blank" rel="noopener sponsored">How To: Foilayage for Gray Hair Blending and Creative Toning</a>.</p>
+
+  <hr>
+
+  <h2 id="sse">Using SSE for Gray Coverage While You Lift</h2>
+  <p>After the foils come out and you're ready for toning, Studio Stylist Express (SSE) is the move for gray coverage. It lifts and covers gray simultaneously in 10 minutes. You're not adding a separate step — you're toning and covering in one application.</p>
+
+  <h3>How to Apply SSE on a Foilayage Client</h3>
+  <ol>
+    <li>Isolate the front money piece first if that section has the heaviest gray concentration</li>
+    <li>Begin application at the bottom and work upward</li>
+    <li>Brush through thoroughly for even distribution</li>
+    <li>Process for 10 minutes</li>
+    <li>Mix with Kenra demi-permanent for simultaneous toning if needed</li>
+  </ol>
+
+  <p>SSE comes in 15 permanent shades and was built for exactly this situation: a client who needs gray coverage but also wants the brightness that foilayage delivers. You're not choosing between the two.</p>
+
+  <p>For understanding base-level formulation decisions, see how <a href="https://mirellamanelli.com/the-manelli-scale/" target="_blank" rel="noopener">the Manelli Scale</a> applies to lightener selection for every client type.</p>
+
+  <div class="cta-block">
+    Ready to master foilayage and every other advanced color technique?<br>
+    <a href="https://hairbnbuniversity.com" target="_blank" rel="noopener">Learn inside Hair B&amp;B University →</a>
+  </div>
+
+  <hr>
+
+  <h2 id="pro-tips">Pro Tips for Better Foilayage Results</h2>
+  <p>These are the corrections I make most often when I'm teaching foilayage to stylists in <a href="https://hairbnbuniversity.com" target="_blank" rel="noopener">Hair B&amp;B University</a>:</p>
+
+  <h3>1. Always use a Power Painter for painted sections</h3>
+  <p>Maximum diffusion, zero harsh lines. This one tool changes the result more than almost anything else. If you're still using a standard brush, try the Power Painter on your next foilayage client and see the difference yourself.</p>
+
+  <h3>2. Saturation is not optional</h3>
+  <p>More lightener equals more even lifting. Thin, patchy application causes banding — and banding on a foilayage client means a color correction on your next appointment. Saturate fully every time.</p>
+
+  <h3>3. Tease the root before you paint</h3>
+  <p>A light tease at the root creates natural diffusion without a color melt step. It also helps the lightener grip the hair at the base of the section. Not the heavy backcombing of a teasy light — just enough to break up the natural line.</p>
+
+  <h3>4. Use a balayage board every time</h3>
+  <p>Short hair, long hair, in-between hair — the board creates the tension you need for proper saturation and keeps your station clean. If you're laying the hair on your palm or the client's shoulder, you're losing control of the section.</p>
+
+  <h3>5. Choose the right lightener for the base level</h3>
+  <p>Clay lightener on a level 1 base will not get you to blonde. It will get you to orange. Blue powder lightener inside a foil is what gets you where you're going on a dark base. Don't fight the science.</p>
+
+  <h3>6. Finish with intention</h3>
+  <p>A Marcel iron and Kenra Throwback Volume Spray completes the transformation. The spray doesn't crunch, doesn't go stiff, and the curls hold through the shoot or the consultation photos you're posting. Don't skip the finish — it's part of the service.</p>
+
+  <hr>
+
+  <h2 id="faq">Frequently Asked Questions</h2>
+
+  <h3>The Technique</h3>
+
+  <div class="faq-item">
+    <div class="faq-q">What is the difference between foilayage and balayage?</div>
+    <div class="faq-a">Balayage is a freehand painting technique done without foils, best suited for levels 7 through 10. Foilayage uses the same painting technique but wraps the sections in foil, creating heat that allows the lightener to lift higher on darker bases (levels 1 through 6). If your client is on a dark base, foilayage will always deliver better results than open-air balayage.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What lightener should I use for foilayage on dark hair?</div>
+    <div class="faq-a">Blue powder lightener at 20 volume is the standard for foilayage on levels 1 through 6. The blue pigment neutralizes warmth during the lift, and powder lightener performs better in a foil environment than clay. Read the <a href="https://mirellamanelli.com/best-bleach-for-dark-hair/" target="_blank" rel="noopener">full lightener breakdown here</a>.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Can foilayage cover gray hair?</div>
+    <div class="faq-a">Foilayage blends gray rather than covering it. For clients who need gray coverage along with dimension, combine foilayage with Studio Stylist Express (SSE) in the toning step. SSE covers gray and tones in 10 minutes, so you can achieve both in a single service without a separate gloss appointment.</div>
+  </div>
+
+  <h3>Timing and Maintenance</h3>
+
+  <div class="faq-item">
+    <div class="faq-q">How long does foilayage take?</div>
+    <div class="faq-a">A full foilayage service typically runs 2.5 to 3.5 hours depending on hair density, length, and section count. Processing at room temperature adds 30 to 45 minutes inside that window. Price accordingly — this is not a quick-service appointment.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">How often should a client come back for foilayage?</div>
+    <div class="faq-a">Most foilayage clients return every 10 to 14 weeks. The soft, blended grow-out is one of the biggest selling points of the technique — there's no harsh root line, so clients don't feel the urgency they would with a full foil highlight. This makes foilayage ideal for low-maintenance clients who still want a high-impact result.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Is foilayage good for fine hair?</div>
+    <div class="faq-a">Yes, with adjustments. Use smaller, thinner sections and lighter saturation per foil to avoid overwhelming fine strands. The babylights approach around the hairline is particularly flattering on fine hair because it creates the appearance of density without adding bulk or additional processing stress.</div>
+  </div>
+
+  <div class="author-bio">
+    <strong>About the Author:</strong> Mirella Manelli is a professional hairstylist and educator with over 20 years of experience behind the chair. She is the founder of <a href="https://hairbnbuniversity.com" target="_blank" rel="noopener" style="color:#FA5185;">Hair B&amp;B University</a>, the founder of <a href="https://manellihair.com" target="_blank" rel="noopener" style="color:#FA5185;">Manelli Hair Extensions</a>, a Modern Salon Top 100 honoree, a five-time Behind the Chair One Shot nominee, and has 430K+ YouTube subscribers. All techniques and opinions are her own.
+  </div>
+
+</div>
