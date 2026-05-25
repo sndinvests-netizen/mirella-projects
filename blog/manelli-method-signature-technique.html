@@ -12,12 +12,9 @@
 #mm-blog-wrap h1.post-title{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,38px);font-weight:700;line-height:1.2;color:#015A42;margin:16px 0 10px;}
 #mm-blog-wrap .post-subtitle{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(16px,2.2vw,20px);color:#8A5A3E;line-height:1.5;margin-bottom:16px;}
 #mm-blog-wrap .byline{font-size:13px;color:#6B4F40;margin-bottom:32px;padding-bottom:24px;border-bottom:2px solid #EDD9CF;}
-#mm-blog-wrap .watch-card{display:flex;align-items:center;gap:16px;background:#fff;border:2px solid #EDD9CF;border-left:5px solid #FA5185;border-radius:10px;padding:16px 20px;margin:0 0 32px;text-decoration:none;color:#1A0F0A;}
-#mm-blog-wrap .watch-card:hover{box-shadow:0 4px 16px rgba(250,81,133,.15);}
-#mm-blog-wrap .watch-icon{flex-shrink:0;width:44px;height:44px;background:#FF0000;border-radius:10px;display:flex;align-items:center;justify-content:center;}
-#mm-blog-wrap .watch-icon svg{width:22px;height:22px;fill:#fff;}
-#mm-blog-wrap .watch-label{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#6B4F40;margin-bottom:4px;}
-#mm-blog-wrap .watch-title{font-size:14px;font-weight:600;line-height:1.4;}
+#mm-blog-wrap .video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;margin:0 0 32px;box-shadow:0 4px 24px rgba(1,90,66,0.15);}
+#mm-blog-wrap .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:10px;}
+#mm-blog-wrap .video-label{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#6B4F40;margin-bottom:10px;}
 #mm-blog-wrap .quick-answer{background:#015A42;color:#fff;border-radius:10px;padding:20px 24px;margin:0 0 36px;font-size:15px;line-height:1.65;}
 #mm-blog-wrap .quick-answer strong{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#FFB6BA;margin-bottom:8px;}
 #mm-blog-wrap h2{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#015A42;margin:44px 0 14px;padding-bottom:8px;border-bottom:2px solid #EDD9CF;}
@@ -93,15 +90,10 @@
     The Manelli Method is a foil highlight technique built on a double zigzag parting — one zigzag at the top of the section, one at the bottom — combined with a Dream Weaver comb through the mids and ends. The result is a soft, diffused root that mimics teasy lights without any backcombing, grows out beautifully for four to six months, and eliminates the need for a shadow root in most cases.
   </div>
 
-  <a class="watch-card" href="https://www.youtube.com/@MirellaManelli" target="_blank" rel="noopener">
-    <div class="watch-icon">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.8 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
-    </div>
-    <div>
-      <div class="watch-label">Watch on YouTube</div>
-      <div class="watch-title">8 Ways to Foil Highlights — The Manelli Method Demonstrated Live</div>
-    </div>
-  </a>
+  <p class="video-label">▶ Watch: 8 Ways to Foil Highlights — The Manelli Method Demonstrated Live</p>
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/fyOs3ghnX-I?start=2" title="8 Ways to Foil Highlights — The Manelli Method by Mirella Manelli" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
 
   <div class="toc">
     <p class="toc-label">In This Post</p>
