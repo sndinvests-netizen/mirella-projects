@@ -2,7 +2,7 @@
 title: "The Manelli Scale Explained: How I Grade Every Bleach (And What the Numbers Really Mean)"
 description: "The Manelli Scale is a 100-point hair bleach rating system created by Mirella Manelli. It scores every lightener across 10 categories — dust, odor, viscosity, timing, swell, lift, integrity, neutralization, versatility, and price — so professional stylists can compare products objectively."
 author: "Mirella Manelli"
-date: 2025-01-01
+date: 2026-05-16
 updated: 2026-05-16
 tags: [bleach, hair lightener, Manelli Scale, professional hairstylist, hair education, blonde, hair bleach rating]
 canonical_url: "https://mirellamanelli.com/the-manelli-scale-explained/"
