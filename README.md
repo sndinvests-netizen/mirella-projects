@@ -4,4 +4,4 @@ A backup and version history repository for all future projects.
 
 ## Projects
 
-_Projects will be added here as they are created._
+- [Claude Code Skills & Agents](tools/claude-code-skills.md): every skill and agent available in Claude Code, with what each one does
