@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mirella Manelli AI Visibility</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single readable column, report style; tables scroll on phones; clean page breaks for print */
+:root{
+  --bg:#fbfafd; --surface:#f2eff7; --fg:#231d2e; --muted:#5f5870; --rule:#ddd6e8;
+  --accent:#6a4aa0;            /* violet toner */
+  --up:#2f7a55; --up-soft:#dcefe4; --down:#b0413e; --down-soft:#f6dedd; --flat:#7a7389; --flat-soft:#ebe8f0;
+  --display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#17141d; --surface:#221e2a; --fg:#ece7f3; --muted:#a69fb4; --rule:#3a3446;
+  --accent:#b69ae6; --up:#6fcf9b; --up-soft:#1f3a2c; --down:#ec8a86; --down-soft:#43201f; --flat:#a39cb0; --flat-soft:#2b2633; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#17141d; --surface:#221e2a; --fg:#ece7f3; --muted:#a69fb4; --rule:#3a3446;
+  --accent:#b69ae6; --up:#6fcf9b; --up-soft:#1f3a2c; --down:#ec8a86; --down-soft:#43201f; --flat:#a39cb0; --flat-soft:#2b2633; color-scheme:dark }
+
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16.5px;line-height:1.55}
+.wrap{max-width:860px;margin:0 auto;padding-inline:20px;padding-block:40px 64px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(1.9rem,4.5vw,2.6rem);font-weight:700;letter-spacing:-.01em}
+h2{font-size:1.45rem;font-weight:700;margin-top:2.6rem;padding-top:1.2rem;border-top:2px solid var(--fg)}
+h3{font-size:1.08rem;font-weight:700;margin-top:1.8rem}
+p,li{max-width:68ch}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:14px;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.lede{font-size:1.12rem;margin-top:18px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:22px}
+.stat{background:var(--bg);padding:14px 14px 12px}
+.stat b{display:block;font-family:var(--display);font-size:1.6rem;font-weight:700}
+.stat span{font-size:.82rem;color:var(--muted);font-family:var(--mono)}
+.stat .d{color:var(--down)} .stat .u{color:var(--up)}
+
+.tbl{overflow-x:auto;margin-top:14px}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.r,th.r{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td code,li code{font-family:var(--mono);font-size:.8em;word-break:break-all;color:var(--muted)}
+.note{font-size:.85rem;color:var(--muted);margin-top:8px}
+
+.pill{display:inline-block;font-family:var(--mono);font-size:.7rem;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.p-up{background:var(--up-soft);color:var(--up)} .p-down{background:var(--down-soft);color:var(--down)} .p-flat{background:var(--flat-soft);color:var(--flat)}
+
+/* YoY chart: scale -20% .. +120%, zero at 14.2857% */
+.chart{margin-top:18px;display:grid;gap:7px}
+.row{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 56px;gap:12px;align-items:center;font-size:.86rem}
+.row .k{text-align:right;line-height:1.2}
+.track{position:relative;height:16px;background:linear-gradient(to right,transparent calc(14.2857% - .5px),var(--muted) calc(14.2857% - .5px),var(--muted) calc(14.2857% + .5px),transparent calc(14.2857% + .5px))}
+.bar{position:absolute;top:2px;height:12px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.bar.u{background:var(--up);left:14.2857%} .bar.d{background:var(--down)} .bar.f{background:var(--flat);left:14.2857%}
+.row .v{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:.82rem}
+.axis{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 56px;gap:12px;font-family:var(--mono);font-size:.7rem;color:var(--muted)}
+.axis .t{position:relative;height:14px}
+.axis .t span{position:absolute;transform:translateX(-50%)}
+
+.takeaways{display:grid;gap:14px;margin-top:16px}
+.take{padding:14px 16px;background:var(--surface);border-left:3px solid var(--accent)}
+.take p{margin:.3rem 0 0}
+ol.actions{padding-left:1.4rem;margin-top:14px;display:grid;gap:12px}
+ol.actions li::marker{font-family:var(--display);font-weight:700;color:var(--accent)}
+ol.actions b{font-family:var(--display)}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--rule);font-size:.82rem;color:var(--muted)}
+
+@media (max-width:640px){
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row,.axis{grid-template-columns:minmax(0,120px) minmax(0,1fr) 46px;gap:8px}
+}
+@media print{
+  :root,:root[data-theme="dark"],:root:not([data-theme="light"]){
+    --bg:#fff; --surface:#f3f0f8; --fg:#1d1826; --muted:#555; --rule:#ccc; --accent:#5a3d8f;
+    --up:#2f7a55; --up-soft:#dcefe4; --down:#b0413e; --down-soft:#f6dedd; --flat:#777; --flat-soft:#eee; color-scheme:light }
+  body{font-size:10.5pt}
+  .wrap{max-width:none;padding:0}
+  h2{break-after:avoid;margin-top:1.6rem}
+  table,.take,.row,.stat,ol.actions li{break-inside:avoid}
+  .tbl{overflow:visible}
+  .pill,.take,.stat{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{margin:0.6in}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<style>
+.chart.plain .track{background:var(--flat-soft);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.chart.plain .bar{left:0}
+.chart.plain .bar.me{background:var(--down);width:0}
+.callout{margin-top:18px;padding:16px 18px;border:1px solid var(--rule);background:var(--surface);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.callout b{font-family:var(--display)}
+.callout ul{margin:.5rem 0 0;padding-left:1.2rem}
+tr.me td{font-weight:600;background:var(--surface)}
+.big0{font-family:var(--display);font-size:3.4rem;font-weight:700;line-height:1;color:var(--down)}
+.hero0{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;margin-top:22px}
+.hero0 p{margin:0;max-width:52ch}
+</style>
+
+</head><body>
+<main class="wrap">
+  <div class="eyebrow">AI Search &amp; Competitor Report · mirellamanelli.com</div>
+  <h1>How Mirella Shows Up in AI Answers</h1>
+  <div class="meta"><span>October 12, 2026</span><span>Source: Ubersuggest AI Search Visibility (ChatGPT + Gemini) and competitor data</span><span>Window: Jul 12 to Oct 12, 2026</span></div>
+
+  <div class="hero0">
+    <div class="big0 num">0%</div>
+    <p>Ubersuggest asked ChatGPT and Gemini 15 questions over the last 3 months (30 answers). Mirella was not mentioned in any of them. 102 other brands were.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b class="num">0 / 30</b><span>AI answers that mention her</span></div>
+    <div class="stat"><b class="num">0%</b><span>share of voice</span></div>
+    <div class="stat"><b class="num">102</b><span>competing brands mentioned</span></div>
+    <div class="stat"><b class="num">18</b><span>Domain Authority (peers: 23 to 31)</span></div>
+  </div>
+
+  <h2>1. The tracking is set up wrong</h2>
+  <p>The 0% is real, but it understates her chances, because the setup measures the wrong things.</p>
+  <div class="callout"><b>What's off in the current setup</b>
+    <ul>
+      <li>The brand is entered as <b>“Hair education”</b>, not “Mirella Manelli” or “Hair B&amp;B University.” A mention of her by name might not be counted.</li>
+      <li>All 15 questions are <b>local Mission Viejo searches</b> about beauty schools and salon coaches. She no longer runs a local salon (Rebel Femme was sold), so she was never likely to appear.</li>
+      <li>None of the questions cover her strongest topics: bleach, money piece, foil placement, color correction, gray blending, or online stylist education.</li>
+      <li><b>Google AI Overviews</b> isn't tracked, and that's where her top-ranking posts are most likely to get cited.</li>
+    </ul>
+  </div>
+
+  <h2>2. Who AI recommends instead</h2>
+  <h3>Salon business coaching: share of AI answers</h3>
+  <div class="chart plain" role="img" aria-label="Share of AI answers mentioning each coaching brand">
+    <div class="row"><div class="k">Summit Salon Business Center</div><div class="track"><div class="bar u" style="width:83.35%"></div></div><div class="v">16.7%</div></div>
+    <div class="row"><div class="k">Steve Gomez Business Coaching</div><div class="track"><div class="bar u" style="width:83.35%"></div></div><div class="v">16.7%</div></div>
+    <div class="row"><div class="k">Inspiring Champions</div><div class="track"><div class="bar u" style="width:66.65%"></div></div><div class="v">13.3%</div></div>
+    <div class="row"><div class="k">Inspired Method</div><div class="track"><div class="bar u" style="width:50%"></div></div><div class="v">10.0%</div></div>
+    <div class="row"><div class="k">124Go</div><div class="track"><div class="bar u" style="width:50%"></div></div><div class="v">10.0%</div></div>
+    <div class="row"><div class="k">SalonDoc</div><div class="track"><div class="bar u" style="width:33.35%"></div></div><div class="v">6.7%</div></div>
+    <div class="row"><div class="k"><b>Mirella Manelli</b></div><div class="track"><div class="bar me"></div></div><div class="v">0%</div></div>
+    <div class="axis"><div></div><div class="t"><span style="left:0;transform:none">0%</span><span style="left:50%">10%</span><span style="left:100%;transform:translateX(-100%)">20%</span></div><div></div></div>
+  </div>
+  <p class="note">Also named in coaching answers: FOCUS Salon Accelerator, Antony Whitaker (Grow My Salon Business), Nick Mirabella, Profitability Thinking.</p>
+
+  <h3>Hair color education</h3>
+  <p>For questions about color workshops and training, AI names brand academies (The Redken Exchange, Wella, Matrix, Moroccanoil Academy, CosmoProf) and local beauty schools (Saddleback Beauty Academy, Paul Mitchell The School Costa Mesa, COBA Academy). No independent educator like Mirella appears.</p>
+
+  <h2>3. How she compares in Google search</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Site</th><th class="r">Domain Authority</th><th class="r">Visits / mo</th><th class="r">Keywords</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr class="me"><td>mirellamanelli.com</td><td class="r">18</td><td class="r">5,335</td><td class="r">4,427</td><td></td></tr>
+      <tr><td>ginabianca.com</td><td class="r">15</td><td class="r">44</td><td class="r">11</td><td>She's well ahead</td></tr>
+      <tr><td>kristinarussell.com.au</td><td class="r">23</td><td class="r">13,905</td><td class="r">4,337</td><td>Closest peer: same keyword count, 2.6x her traffic</td></tr>
+      <tr><td>jzstyles.com</td><td class="r">23</td><td class="r">111,300</td><td class="r">4,464</td><td>Same keyword count, 21x her traffic</td></tr>
+      <tr><td>uglyducklingcolor.com</td><td class="r">31</td><td class="r">43,852</td><td class="r">22,962</td><td>Brand that does education content</td></tr>
+      <tr><td>behindthechair.com</td><td class="r">57</td><td class="r">56,031</td><td class="r">23,002</td><td>The big name in stylist education</td></tr>
+      <tr><td>madison-reed.com</td><td class="r">58</td><td class="r">928,310</td><td class="r">62,680</td><td>Shares 766 of her keywords</td></tr>
+      <tr><td>lorealparisusa.com</td><td class="r">78</td><td class="r">2,508,116</td><td class="r">382,815</td><td>Shares 1,525 of her keywords</td></tr>
+      <tr><td>byrdie.com</td><td class="r">81</td><td class="r">6,058,526</td><td class="r">1,255,580</td><td>Shares 1,402 of her keywords</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Visits are Ubersuggest estimates for US organic search.</p>
+
+  <div class="takeaways">
+    <div class="take"><b>Competitive with other stylist-educators, held back by authority.</b><p>She's well ahead of the smallest sites, but her Domain Authority of 18 trails her nearest peers at 23 to 31. That limits both her Google rankings and her chances of being cited by AI, because AI leans on sites that other sites mention.</p></div>
+  </div>
+
+  <h2>4. What would get her into AI answers</h2>
+  <ol class="actions">
+    <li><b>Fix the tracking.</b> Rename the brand to “Mirella Manelli” with “Hair B&amp;B University” as an alternate name. Replace the local questions with her topics, for example: best bleach for dark hair, what is a money piece, how to place foils for face shape, online balayage course for stylists, best hair color education online, how to blend gray hair with highlights. Track behindthechair, jzstyles and uglyducklingcolor as competitors. This uses 1 of 100 monthly setup credits.</li>
+    <li><b>Make her name easy for AI to recognize.</b> Add Person and Organization schema, and build an About page that ties together Mirella Manelli, Hair B&amp;B University, Manelli Hair and her YouTube channel. Use the same bio everywhere.</li>
+    <li><b>Get mentioned on other sites.</b> Guest education on behindthechair, podcast appearances, and brand-educator listings raise both Domain Authority and AI mentions.</li>
+    <li><b>Write posts AI can quote.</b> Open each post with a short, direct answer, then add the FAQ blocks from the May audit. Start with the bleach and gray blending posts, which already rank #2.</li>
+  </ol>
+
+  <footer>Data pulled October 12, 2026 from Ubersuggest. AI visibility covers ChatGPT and Gemini for the 15 questions currently tracked, 2 answers each. Results will change once the tracked questions are updated to match her topics.</footer>
+</main>
+
+</body></html>
